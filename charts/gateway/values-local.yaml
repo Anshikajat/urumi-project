@@ -1,0 +1,11 @@
+# Local k3d: images are imported with `k3d image import`, never pulled.
+# gemini.apiKey is NOT here. Pass it once with --set-string gemini.apiKey=...
+image:
+  repository: gateway
+  tag: "0.2.5"
+  pullPolicy: IfNotPresent
+persistence:
+  size: 1Gi
+  storageClass: ""
+gemini:
+  model: "gemini-3.5-flash"

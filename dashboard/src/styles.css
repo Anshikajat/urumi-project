@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* ---------- login page ---------- */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---------- logged-in layout ---------- */
+
+.topbar {
+  background: #ffffff;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* ---------- text ---------- */
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.muted {
+  margin: 0;
+  color: #6b7280;
+}
+
+.small {
+  font-size: 13px;
+}
+
+.error {
+  margin: 4px 0 0 0;
+  color: #b91c1c;
+}
+
+.success {
+  margin: 4px 0 0 0;
+  color: #15803d;
+}
+
+/* ---------- panels ---------- */
+
+.panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.server-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.grow {
+  flex: 1;
+}
+
+.tools {
+  margin-top: 12px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.chip {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+/* ---------- inputs and buttons ---------- */
+
+input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.danger {
+  background: #dc2626;
+}
+
+button:disabled {
+  background: #9ca3af;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+button.small-btn {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+/* ---------- badges ---------- */
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #e5e7eb;
+}
+
+.badge.admin {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge.member {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge.revoked {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #e5e7eb;
+}
+
+.status.up {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status.down {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status.disabled {
+  background: #e5e7eb;
+  color: #4b5563;
+}
+
+.status.checking {
+  background: #fef9c3;
+  color: #a16207;
+}
+
+.status.cred {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* ---------- tabs, tables, key box ---------- */
+
+.tabs {
+  max-width: 900px;
+  margin: 16px auto 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 8px;
+}
+
+button.tab {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.tab.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+tr.inactive td {
+  color: #9ca3af;
+}
+
+.key-box {
+  border: 2px solid #f59e0b;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.key-text {
+  word-break: break-all;
+  background: #f3f4f6;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* ---------- edit box (servers page) ---------- */
+
+.edit-box {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ---------- chat ---------- */
+
+.chat-log {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 240px;
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+.bubble {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+.bubble.user {
+  align-self: flex-end;
+  background: #dbeafe;
+}
+
+.bubble.assistant {
+  align-self: flex-start;
+  background: #f3f4f6;
+}
+
+.bubble-text {
+  white-space: pre-wrap;
+}
+
+.chip-error {
+  background: #fee2e2;
+  color: #b91c1c;
+}

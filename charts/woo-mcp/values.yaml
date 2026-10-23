@@ -1,0 +1,25 @@
+image:
+  repository: woo-mcp
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+
+# URL of the store as seen from inside the cluster
+storeUrl: http://wordpress.store.svc.cluster.local
+# Only needed locally, so WordPress answers as store.localhost. Leave empty in production.
+storeHostHeader: store.localhost
+
+# WooCommerce REST keys. Leave empty here and pass them with --set at install time.
+wc:
+  key: ""
+  secret: ""
+
+service:
+  port: 8000
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 250m
+    memory: 192Mi

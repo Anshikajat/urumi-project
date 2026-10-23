@@ -1,0 +1,8 @@
+# VPS (k3s). CHANGE YOUR_USER and dashboard.example.com.
+image:
+  repository: ghcr.io/YOUR_USER/dashboard
+  tag: "0.1.2"
+  pullPolicy: IfNotPresent
+ingress:
+  host: dashboard.example.com
+  className: traefik

@@ -1,0 +1,20 @@
+# The gateway is reached only through the dashboard's /api proxy.
+# (kubectl port-forward and kubelet probes are not affected by NetworkPolicies.)
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ .Release.Name }}-only-from-dashboard
+spec:
+  podSelector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: dashboard
+      ports:
+        - protocol: TCP
+          port: 9000

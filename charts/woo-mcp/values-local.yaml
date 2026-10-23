@@ -1,0 +1,6 @@
+# Local k3d. WordPress is reached through its in-cluster Service,
+# so it must be told to answer as store.localhost.
+# WC key and secret are NOT here. Pass them at install time:
+#   --set-string wc.key=... --set-string wc.secret=...
+storeUrl: http://wordpress.store.svc.cluster.local
+storeHostHeader: store.localhost

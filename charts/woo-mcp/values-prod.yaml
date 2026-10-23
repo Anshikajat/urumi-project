@@ -1,0 +1,10 @@
+# VPS (k3s). CHANGE shop.example.com to your real store domain.
+# The store answers on its real domain, so no Host header override is needed.
+# WC key and secret are NOT here. Pass them at install time:
+#   --set-string wc.key=... --set-string wc.secret=...
+storeUrl: https://shop.example.com
+storeHostHeader: ""
+image:
+  repository: ghcr.io/YOUR_USER/woo-mcp
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent

@@ -1,0 +1,10 @@
+# VPS (k3s). CHANGE shop.example.com to your real domain.
+# Passwords are NOT here. Pass them at install time:
+#   --set-string secrets.dbRootPassword=... --set-string secrets.dbPassword=...
+host: shop.example.com
+storage:
+  dbSize: 10Gi
+  wpSize: 10Gi
+  className: local-path
+restSsl:
+  enabled: true

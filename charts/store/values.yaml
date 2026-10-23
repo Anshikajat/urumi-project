@@ -1,0 +1,12 @@
+host: store.localhost
+
+secrets:
+  dbRootPassword: change-me-root
+  dbPassword: change-me-db
+
+storage:
+  dbSize: 2Gi
+  wpSize: 2Gi
+  className: ""
+restSsl:
+ enabled: true

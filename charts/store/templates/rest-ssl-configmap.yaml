@@ -1,0 +1,9 @@
+{{- if .Values.restSsl.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rest-ssl
+data:
+  rest-ssl.php: |
+{{ .Files.Get "files/rest-ssl.php" | indent 4 }}
+{{- end }}

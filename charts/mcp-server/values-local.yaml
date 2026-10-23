@@ -1,0 +1,6 @@
+# Local k3d. `script` is set per release: notes_server.py for notes, utils_server.py for utils.
+image:
+  repository: extra-mcp
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+port: 8000

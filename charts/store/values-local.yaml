@@ -1,0 +1,8 @@
+# Local k3d. The default passwords in values.yaml are local-only placeholders.
+host: store.localhost
+storage:
+  dbSize: 2Gi
+  wpSize: 2Gi
+  className: ""
+restSsl:
+  enabled: true

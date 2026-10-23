@@ -1,0 +1,23 @@
+image:
+  repository: gateway
+  tag: "0.2.4"
+  pullPolicy: IfNotPresent
+
+service:
+  port: 9000
+
+persistence:
+  size: 1Gi
+  storageClass: ""
+
+gemini:
+  apiKey: ""
+  model: "gemini-3.5-flash"
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 384Mi

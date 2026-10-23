@@ -1,0 +1,4 @@
+.venv/
+gateway.db
+__pycache__/
+test_client.py

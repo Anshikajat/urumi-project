@@ -1,0 +1,6 @@
+# VPS (k3s). CHANGE YOUR_USER. `script` is set per release (notes_server.py, utils_server.py).
+image:
+  repository: ghcr.io/YOUR_USER/extra-mcp
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+port: 8000

@@ -1,0 +1,18 @@
+# VPS (k3s). CHANGE YOUR_USER to your registry account.
+# gemini.apiKey is NOT here. Pass it with --set-string gemini.apiKey=...
+image:
+  repository: ghcr.io/YOUR_USER/gateway
+  tag: "0.2.5"
+  pullPolicy: IfNotPresent
+persistence:
+  size: 5Gi
+  storageClass: local-path
+gemini:
+  model: "gemini-3.5-flash"
+resources:
+  requests:
+    cpu: 100m
+    memory: 192Mi
+  limits:
+    cpu: 1
+    memory: 512Mi

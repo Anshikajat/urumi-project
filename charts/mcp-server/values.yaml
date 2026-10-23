@@ -1,0 +1,15 @@
+image:
+  repository: extra-mcp
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+
+script: notes_server.py
+port: 8000
+
+resources:
+  requests:
+    cpu: 20m
+    memory: 48Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
