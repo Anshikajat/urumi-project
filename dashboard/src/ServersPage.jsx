@@ -257,17 +257,17 @@ export default function ServersPage({ sessionKey, isAdmin, onAuthError }) {
         const info = status[server.name];
         const serverTools = toolsFor(server.name);
         const editing = editingId === server.id;
-        let label = "disabled";
+        let label = "Disabled";
         let labelClass = "status disabled";
         if (server.enabled) {
           if (!info) {
             label = "checking";
             labelClass = "status checking";
           } else if (info.status === "up") {
-            label = "up";
+            label = "Connected";
             labelClass = "status up";
           } else {
-            label = "down";
+            label = "Unreachable";
             labelClass = "status down";
           }
         }

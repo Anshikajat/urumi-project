@@ -173,7 +173,7 @@ export default function MembersPage({ sessionKey, onAuthError }) {
                 </td>
                 <td>{new Date(u.created_at).toLocaleString()}</td>
                 <td>
-                  {u.active && (
+                  {!!u.active && (
                     <button
                       className="danger small-btn"
                       disabled={busy}
